@@ -1,0 +1,15 @@
+# venv
+.venv
+py_modules
+
+# ide
+.vscode
+
+# python created bindings
+__pycache__
+*.pyc
+*.egg-info*
+pip-wheel-metadata
+
+# build
+dist
