@@ -3,7 +3,7 @@ from froi import Froi, __version__
 
 
 def test_version():
-    assert __version__ == '0.4.4'
+    assert __version__ == '0.4.6'
 
 def test_simple_app():
     class SomeRoute(Froi):

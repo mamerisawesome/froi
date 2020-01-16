@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "froi"
-version = "0.4.4"
+version = "0.4.6"
 description = "A Flask wrapper to easily handle routes defined as Python native objects"
 authors = ["Almer Mendoza <atmalmer23@gmail.com>"]
 readme = "README.rst"

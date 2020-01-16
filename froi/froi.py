@@ -21,13 +21,18 @@ class Froi(Route):
         self.app = app
         self.method = []
 
-    def route(self, url='', func=None, **kwargs):
+    def route(self, url='', func=None, handle_forward_in_route=True, **kwargs):
         """Wrap server method's route"""
         add = self.app.add_url_rule
         add('{}{}'.format(self.prefix, url),
             methods=self.getmethods(),
             view_func=func,
             **kwargs)
+
+        self.method = []
+
+        if handle_forward_in_route == False:
+            return
 
         # handle forward slash
         if self.prefix is not '' or url is not '':
@@ -36,7 +41,6 @@ class Froi(Route):
                 view_func=func,
                 **kwargs)
 
-        self.method = []
 
     def install(self):
         """Attach routes to defined app"""

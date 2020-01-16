@@ -13,7 +13,7 @@ class SomeComponent(Froi):
 
     def install(self):
         self.setget().route(func=run1)
-        # self.setpost().route('/post', func=run2)
+        self.setpost().route('/post', func=run2)
 
 app = Flask('app')
 some_component = SomeComponent(app)
